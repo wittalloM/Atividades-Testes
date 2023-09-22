@@ -1,0 +1,19 @@
+[
+    {
+        "question": "Em que ano foi lançado o primeiro mangá de naruto ?",
+        "answers": [
+            {
+                "text": "Em 1992",
+                "status": false
+            },
+            {
+                "text": "Em 1990",
+                "status": true
+            },
+            {
+                "text": "Em 1996",
+                "status": true
+            }
+        ]
+    }
+]

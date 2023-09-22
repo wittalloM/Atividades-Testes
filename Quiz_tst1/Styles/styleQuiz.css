@@ -27,18 +27,24 @@ body {
     box-shadow: 0 0 2px 2px #8d99ae;
 }
 
+.ttl-box {
+    font-size: 1.5rem;
+    font-family: cursive;
+    font-weight: 500;
+}
+
 .question-box {
     margin: 1rem 0rem;
-    padding: 10px;
+    padding: 5px;
     color: #fb8500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
 .answers-box {
     margin: 1rem 0rem;
-    padding: 10px 25px;
+    padding: 10px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,23 +55,79 @@ body {
     font-family:  Helvetica, sans-serif ;    
 }
 
-#stt-btt {
-    padding: 10px 50px;
-    
-    background-color: #023047;
+.asw-btt {
+    margin: 10px 0px;
+    padding: 10px 20px;
+
+    background-color: #fb8500;
     border: none;
     border-radius: 15px;
 
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 500;
 }
-#nxt-btt {
-    padding: 10px 50px;
+.asw-btt:hover {
+    font-size: 110%;
+    transition: 0.3s;
+
+    background-color: #ffffff;
+    color: #fb8500;
+}
+
+
+
+.controls-box {
+    margin: 1rem 0rem;
+    display: grid;
+    gap: 20px;
+}
+
+#stt-btt {
+    padding: 10px 40px;
     
     background-color: #023047;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
 
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
+    cursor: pointer;
+    transition: filter 0.2;
+
+}
+#stt-btt:hover {
+    font-weight: 500;
+    color: #023047;
+    
+    background-color: #fb8500;
+    box-shadow: 0 0 2px 2px #ffffff ;
+    border: none;
+    border-radius: 10px;
+    filter: brightness(0.8);
+}
+
+#nxt-btt {
+    padding: 10px 40px;
+    
+    background-color: #023047;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+#nxt-btt:hover {
+    font-weight: 500;
+    color: #023047;
+    
+    background-color: #fb8500;
+    box-shadow: 0 0 2px 2px #ffffff ;
+    border: none;
+    border-radius: 10px;
+    filter: brightness(0.8);
+}
+
+.hide {
+    display: none;
 }
