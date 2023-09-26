@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/quiz_Home.css">
+    <link rel="icon" href="../Arts/logo_narutoQuiz.png">
     <title>Quiz-Home</title>
 </head>
+
 <body>
+    <header class="cab-box">
+        <div class="icon-box">
+            <img class="logoimg" src="../Arts/logo2_narutoQuiz.png" />
+        </div>
+        <div class="link-box">
+            <ol>
+                <li>
+                    <a href="./quiz_Home.html">Home</a>
+                </li>
+                <li>
+                    <a>Placares</a>
+                </li>
+            </ol>
+        </div>
+    </header>
     
     <container class="main-content">
+
         <div class="ttl-box">
             <h1>Dattebayo Quiz</h1>
         </div>
-        <div class="question-box">
+        <div class="question-box hide">
             <h1 id="qst-enun">A pergunta será exibida aqui !</h1>
         </div>
-        <div class="answers-box">
+        <div class="answers-box hide">
             <button class="asw-btt hide">Resp 1</button>
             <button class="asw-btt hide">Resp 2</button>
             <button class="asw-btt hide">Resp 3</button>
             <button class="asw-btt hide">Resp 4</button>
         </div>
         <div class="controls-box">
-            <button id="stt-btt">Iniciar Quiz</button>
-            <button id="nxt-btt">Próxima Questão</button>
+            <button id="stt-btt" class="stt-btt ">Iniciar Quiz</button>
+            <button id="nxt-btt" class="nxt-btt hide">Próxima Questão</button>
         </div>
+
     </container>
 
+
+    <footer class="ftt-box">
+        <h2>Naruto Quiz | Dev by ©Wittallo Marcos</h2>
+    </footer>
+
+
+    <script defer src="../Scripts/nQuiz.js" type="module" async></script>
 </body>
+
 </html>
