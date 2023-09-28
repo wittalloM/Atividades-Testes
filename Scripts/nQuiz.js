@@ -50,11 +50,35 @@ function Show_qst() {
         if (answer.correct) {
             nw_answer.dataset.correct = answer.correct
         }
+
+        nw_answer.addEventListener('click', Select_asw)
         $asw_box.appendChild(nw_answer)
     })
 
 
 
     $nxt_btt.addEventListener('click', Next_qst)
-    currentIndex += 1
+    currentIndex++
 }
+
+function Select_asw(e) {
+    let usr_resp = e.target
+    if (usr_resp.dataset.correct) {
+        document.body.classList.add('correct-asw')
+    }
+    else {
+        document.body.classList.add('incorrect-asw')
+    }
+
+    document.querySelectorAll('.answers').forEach(button => {
+
+        if (button.dataset.corect) {
+            button.classList.add('correct-asw')
+        } else {
+            button.classList.add('incorrect-asw')
+        }
+
+        button.disabled = true
+    })
+}
+

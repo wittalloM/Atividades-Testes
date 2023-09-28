@@ -136,12 +136,17 @@ body {
     font-weight: 500;
     color: #ffffff;
 }
-.asw-btt:hover {
+.asw-btt:not(:disabled)hover {
     font-size: 110%;
     transition: 0.3s;
 
     background-color: #ffffff;
     color: #fb8500;
+}
+
+.asw-btt:disabled {
+   cursor: not-allowed;
+   background-color: #eb5e28; 
 }
 
 
@@ -216,6 +221,21 @@ body {
     font-size: 0.5rem;
 
 }
+
+
+.correct-asw {
+    background-color: #a4c3b2;
+    color: #ffffff;
+}
+
+.incorrect-asw {
+    background-color: #eb5e28 ;
+    color: #101010;
+}
+
+
+
+
 
 .hide {
     display: none;
