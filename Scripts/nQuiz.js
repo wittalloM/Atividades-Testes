@@ -29,7 +29,7 @@ function ord_qst(a,b) {
 
 function Start_game() {
     $stt_btt.classList.add('hide');
-    $nxt_btt.classList.remove('hide');
+
     $qst_box.classList.remove('hide')
     $asw_box.classList.remove('hide');
     Show_qst();
@@ -37,14 +37,19 @@ function Start_game() {
 
 
 function Show_qst() {
-    while ($asw_box.firstChild) {
-        $asw_box.removeChild($asw_box.firstChild)
+
+
+    if (questions.length == currentIndex) {
+        return End_Game()
+
     }
+
 
     $qst_txt.textContent = questions[currentIndex].question
     questions[currentIndex].answers.forEach(answer => {
         const nw_answer = document.createElement('button')
         nw_answer.classList.add('asw-btt')
+        nw_answer.classList.add('answer')
         nw_answer.textContent = answer.text
 
         if (answer.correct) {
@@ -56,15 +61,13 @@ function Show_qst() {
     })
 
 
-
-    $nxt_btt.addEventListener('click', Next_qst)
-    currentIndex++
 }
 
 function Select_asw(e) {
     let usr_resp = e.target
     if (usr_resp.dataset.correct) {
         document.body.classList.add('correct-asw')
+        Placar++
     }
     else {
         document.body.classList.add('incorrect-asw')
@@ -73,6 +76,7 @@ function Select_asw(e) {
     document.querySelectorAll('.answers').forEach(button => {
 
         if (button.dataset.corect) {
+
             button.classList.add('correct-asw')
         } else {
             button.classList.add('incorrect-asw')
@@ -80,5 +84,39 @@ function Select_asw(e) {
 
         button.disabled = true
     })
+
+    $nxt_btt.classList.remove('hide')
+    $nxt_btt.addEventListener('click', Next_qst)
+    currentIndex++
 }
+
+
+
+function Reset_stt() {
+
+    document.body.removeAttribute('class')
+    while ($asw_box.firstChild) {
+        $asw_box.removeChild($asw_box.firstChild)
+    }
+}
+
+
+function Next_qst() {
+    Reset_stt()
+    Show_qst()
+}
+
+
+function End_Game() {
+    $qst_box.classList.add('hide')
+    $asw_box.classList.add('hide')
+    $stt_btt.classList.remove('hide')
+    $stt_btt.textContent = 'Reiniciar Quis'
+
+    let status = document.createElement('div')
+    status. innerHTML 
+}
+
+
+
 

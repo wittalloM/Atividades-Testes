@@ -23,7 +23,7 @@ body {
 }
 
 .icon-box {
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,7 +38,7 @@ body {
 }
 
 .link-box {
-    margin: 1.5rem 0rem;
+    margin: 1rem 0rem;
 
     display: flex;
     flex-direction: row;
@@ -57,7 +57,7 @@ body {
     padding: 10px;
     margin: 0px 25px;
    
-   
+   font-size: 0.8rem;
     color: #ffffff;
     border: 2px solid #fb8500;
     border-radius: 10px;
@@ -80,7 +80,7 @@ body {
 
 
 .main-content {
-    height: 60vh;
+    height: auto;
     width: auto;
     padding: 15px 25px;
     margin: 2rem 1rem;
@@ -90,13 +90,14 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    border: 2px solid #023047;
-    box-shadow: 0 0 2px 2px #8d99ae;
-    background-color:#101010;
+    box-shadow: 0 0 2px 1px #8d99ae;
+    background-color:#37464d;
+    border-radius: 10px;
 }
 
 .ttl-box {
-    font-size: 1.5rem;
+    margin: 2rem 0rem;
+    font-size: 1.2rem;
     font-family: "DynaPuff", cursive;
     font-weight: 500;
     color: #fb8500;
@@ -106,9 +107,9 @@ body {
     margin: 1rem 0rem;
     padding: 5px;
     color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-family: 'Inclusive Sans', sans-serif ;
+    font-size: 0.5rem;
+    font-weight: 300;
 }
 
 .answers-box {
@@ -119,7 +120,7 @@ body {
     justify-content: center;
     align-items: center;
     
-    background-color: #023047;
+    background-color: #566a75;
     border-radius: 10px;
     font-family:  Helvetica, sans-serif ;    
 }
@@ -133,10 +134,10 @@ body {
     border-radius: 15px;
 
     font-size: 0.7rem;
-    font-weight: 500;
+    font-family: 'Inclusive Sans', sans-serif;
     color: #ffffff;
 }
-.asw-btt:not(:disabled)hover {
+.asw-btt:not(:disabled):hover {
     font-size: 110%;
     transition: 0.3s;
 
@@ -184,6 +185,7 @@ body {
 
 .nxt-btt {
     padding: 10px 40px;
+    margin: 1rem 0rem;
     
     background-color: #023047;
     border: none;
@@ -224,7 +226,7 @@ body {
 
 
 .correct-asw {
-    background-color: #a4c3b2;
+    background-color: #30a966;
     color: #ffffff;
 }
 
