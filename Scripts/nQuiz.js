@@ -7,7 +7,7 @@ const $asw_box = document.getElementById('answers-box')
 const $stt_btt = document.getElementById('stt-btt')
 const $nxt_btt = document.getElementById('nxt-btt')
 
-var sort_qst, Placar = 0
+var sort_qst, placar = 0
 var currentIndex = 0
 
 $stt_btt.addEventListener('click', Start_game)
@@ -37,7 +37,7 @@ function Start_game() {
 
 
 function Show_qst() {
-
+    Reset_stt()
 
     if (questions.length == currentIndex) {
         return End_Game()
@@ -67,16 +67,16 @@ function Select_asw(e) {
     let usr_resp = e.target
     if (usr_resp.dataset.correct) {
         document.body.classList.add('correct-asw')
-        Placar++
+        placar++
     }
     else {
         document.body.classList.add('incorrect-asw')
     }
 
+
     document.querySelectorAll('.answers').forEach(button => {
 
         if (button.dataset.corect) {
-
             button.classList.add('correct-asw')
         } else {
             button.classList.add('incorrect-asw')
@@ -85,36 +85,40 @@ function Select_asw(e) {
         button.disabled = true
     })
 
+
     $nxt_btt.classList.remove('hide')
-    $nxt_btt.addEventListener('click', Next_qst)
-    currentIndex++
+    $nxt_btt.addEventListener('click', Show_qst)
 }
 
 
 
 function Reset_stt() {
 
+    currentIndex++
+
     document.body.removeAttribute('class')
+
     while ($asw_box.firstChild) {
         $asw_box.removeChild($asw_box.firstChild)
     }
+
 }
 
-
-function Next_qst() {
-    Reset_stt()
-    Show_qst()
-}
 
 
 function End_Game() {
-    $qst_box.classList.add('hide')
+    $qst_txt.classList.add('hide')
     $asw_box.classList.add('hide')
     $stt_btt.classList.remove('hide')
-    $stt_btt.textContent = 'Reiniciar Quis'
+    $nxt_btt.classList.add('hide')
+    $stt_btt.textContent = 'Reiniciar Quiz'
 
     let status = document.createElement('div')
-    status. innerHTML 
+    status.innerHTML = `<h3>Parabéns, voçê conseguiu chegar ao final do nosso quiz !</h3>`
+    status.innerHTML += `<p> Você fez um total de ${placar} pontos,Parabéns<p>`
+
+    $qst_box.appendChild(status)
+
 }
 
 
