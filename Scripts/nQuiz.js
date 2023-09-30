@@ -39,6 +39,8 @@ function Start_game() {
 function Show_qst() {
     Reset_stt()
 
+    $nxt_btt.classList.add('hide')
+
     if (questions.length == currentIndex) {
         return End_Game()
 
@@ -114,8 +116,9 @@ function End_Game() {
     $stt_btt.textContent = 'Reiniciar Quiz'
 
     let status = document.createElement('div')
+    status.classList.add('status-box')
     status.innerHTML = `<h3>Parabéns, voçê conseguiu chegar ao final do nosso quiz !</h3>`
-    status.innerHTML += `<p> Você fez um total de ${placar} pontos,Parabéns<p>`
+    status.innerHTML += `<p> Você fez um total de ${placar} pontos, S2 <p>`
 
     $qst_box.appendChild(status)
 

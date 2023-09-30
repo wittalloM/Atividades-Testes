@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DynaPuff:wght@400;700&family=Inclusive+Sans&family=Work+Sans:wght@200;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400&family=Onest:wght@100;200;300;400&family=Pixelify+Sans:wght@400;500;600&display=swap');
 
 
 * {
@@ -9,18 +9,35 @@
 
 body {
     
-    background-color: #353535;
-    font-family: "Insclusive Sans", sans-serif;
+    background-color: #252422;
+    font-family: "Onest", sans-serif;
 }
 
 
 .cab-box {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    background-color: #202020;
+    background-color: #403d39;
 }
+
+
+.ttl-cab {
+    margin: 0.5rem 0rem;
+    padding: 5px 15px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    font-size: 1.5rem;
+    font-family: 'Pixelify Sans', cursive;
+    font-weight: 200;
+    color: #eb5e28;
+}
+
 
 .icon-box {
     margin: 0.5rem 0rem;
@@ -58,7 +75,7 @@ body {
     margin: 0px 25px;
    
    font-size: 0.8rem;
-    color: #ffffff;
+    color: #fffcf2;
     border: 2px solid #fb8500;
     border-radius: 10px;
 }
@@ -67,7 +84,7 @@ body {
     margin: 0px 25px;
 
     font-weight: 500;
-    color: #ffffff;
+    color: #fffcf2;
     background-color: #fb8500;
     border-radius: 10px;
     transition: 0.4s;
@@ -75,7 +92,7 @@ body {
 
 .link-box :any-link {
     text-decoration: none;
-    color: #ffffff;
+    color: #fffcf2;
 }
 
 
@@ -90,24 +107,25 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    box-shadow: 0 0 2px 1px #8d99ae;
-    background-color:#37464d;
+    background-color: #403d39 ;
+    box-shadow:  1px 1px #eb5e28;
+    background-color:#403d39;
     border-radius: 10px;
 }
 
 .ttl-box {
     margin: 2rem 0rem;
     font-size: 1.2rem;
-    font-family: "DynaPuff", cursive;
-    font-weight: 500;
+    font-family: "Pixelify sans", cursive;
+    font-weight: 200;
     color: #fb8500;
 }
 
 .question-box {
     margin: 1rem 0rem;
     padding: 5px;
-    color: #ffffff;
-    font-family: 'Inclusive Sans', sans-serif ;
+    color: #fffcf2;
+    font-family: 'Onest', sans-serif ;
     font-size: 0.5rem;
     font-weight: 300;
 }
@@ -120,9 +138,9 @@ body {
     justify-content: center;
     align-items: center;
     
-    background-color: #566a75;
+    background-color: #252422;
     border-radius: 10px;
-    font-family:  Helvetica, sans-serif ;    
+    font-family:  'Onest', sans-serif ;    
 }
 
 .asw-btt {
@@ -133,9 +151,9 @@ body {
     border: none;
     border-radius: 15px;
 
-    font-size: 0.7rem;
-    font-family: 'Inclusive Sans', sans-serif;
-    color: #ffffff;
+    font-size: 0.9rem;
+    font-family: 'Onest', sans-serif;
+    color: #101010;
 }
 .asw-btt:not(:disabled):hover {
     font-size: 110%;
@@ -147,7 +165,7 @@ body {
 
 .asw-btt:disabled {
    cursor: not-allowed;
-   background-color: #eb5e28; 
+   background-color: #7a2300; 
 }
 
 
@@ -161,23 +179,23 @@ body {
 .stt-btt {
     padding: 10px 40px;
     
-    background-color: #023047;
+    background-color: #fffcf2;
     border: none;
     border-radius: 10px;
 
     font-size: 0.8rem;
     font-weight: 500;
-    color: #ffffff;
+    color: #eb5e28;
     cursor: pointer;
     transition: filter 0.2;
 
 }
 .stt-btt:hover {
     font-weight: 500;
-    color: #023047;
+    color: #101010;
     
     background-color: #fb8500;
-    box-shadow: 0 0 2px 2px #ffffff ;
+    box-shadow: 0 0 1px 2px #ffffff ;
     border: none;
     border-radius: 10px;
     
@@ -187,21 +205,21 @@ body {
     padding: 10px 40px;
     margin: 1rem 0rem;
     
-    background-color: #023047;
+    background-color: #fffcf2;
     border: none;
     border-radius: 10px;
 
     font-size: 0.8rem;
     font-weight: 500;
-    color: #ffffff;
+    color: #eb5e28;
 }
 
 .nxt-btt:hover {
     font-weight: 500;
-    color: #023047;
+    color: #101010;
     
     background-color: #fb8500;
-    box-shadow: 0 0 2px 2px #ffffff ;
+    box-shadow: 0 0 1px 2px #ffffff ;
     border: none;
     border-radius: 10px;
     
@@ -211,8 +229,8 @@ body {
 .ftt-box {
     padding: 10px;
     margin: 1rem 0rem;
-    color: #ffffff;
-    background-color: #000000;
+    color: #eb5e28;
+    background-color: #403d39;
 
 
     display: flex;
@@ -220,8 +238,36 @@ body {
     align-items: center;
     justify-content: center;
 
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
     font-size: 0.5rem;
 
+}
+
+.status-box {
+    margin: 1rem 0rem;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    font-weight: 400;
+    color: #eb5e28;
+}
+
+.status-box h1 {
+    font-size: 1rem;
+    margin: 0.5rem 0rem;
+    padding: 10px 0px;
+}
+
+
+.status-box p {
+    font-size: 0.8rem;
+    margin: 0.5rem 0rem;
+    color: #fffcf2;
 }
 
 
@@ -231,7 +277,7 @@ body {
 }
 
 .incorrect-asw {
-    background-color: #eb5e28 ;
+    background-color: #742202 ;
     color: #101010;
 }
 
