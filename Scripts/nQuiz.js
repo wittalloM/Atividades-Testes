@@ -7,13 +7,11 @@ const $asw_box = document.getElementById('answers-box')
 const $stt_btt = document.getElementById('stt-btt')
 const $nxt_btt = document.getElementById('nxt-btt')
 
-var sort_qst, placar = 0
+var placar = 0
 var currentIndex = 0
 
 $stt_btt.addEventListener('click', Start_game)
-sort_qst = questions[currentIndex]
-console.log(questions[currentIndex].question);
-
+$nxt_btt.addEventListener('click', Show_qst)
 /* [Função de ordenação de array] 
 function ord_qst(a,b) {
     for (questions.question in questions) {}
@@ -29,9 +27,6 @@ function ord_qst(a,b) {
 
 function Start_game() {
     $stt_btt.classList.add('hide');
-
-    $qst_box.classList.remove('hide')
-    $asw_box.classList.remove('hide');
     Show_qst();
 }
 
@@ -79,6 +74,7 @@ function Select_asw(e) {
     document.querySelectorAll('.answers').forEach(button => {
 
         if (button.dataset.corect) {
+            button.classList.remove('asw-btt')
             button.classList.add('correct-asw')
         } else {
             button.classList.add('incorrect-asw')
@@ -89,7 +85,7 @@ function Select_asw(e) {
 
 
     $nxt_btt.classList.remove('hide')
-    $nxt_btt.addEventListener('click', Show_qst)
+
 }
 
 
@@ -97,6 +93,8 @@ function Select_asw(e) {
 function Reset_stt() {
 
     currentIndex++
+    $qst_box.classList.remove('hide')
+    $asw_box.classList.remove('hide');
 
     document.body.removeAttribute('class')
 
@@ -111,14 +109,17 @@ function Reset_stt() {
 function End_Game() {
     $qst_txt.classList.add('hide')
     $asw_box.classList.add('hide')
-    $stt_btt.classList.remove('hide')
     $nxt_btt.classList.add('hide')
+    $stt_btt.classList.remove('hide')
     $stt_btt.textContent = 'Reiniciar Quiz'
 
     let status = document.createElement('div')
     status.classList.add('status-box')
     status.innerHTML = `<h3>Parabéns, voçê conseguiu chegar ao final do nosso quiz !</h3>`
-    status.innerHTML += `<p> Você fez um total de ${placar} pontos, S2 <p>`
+    status.innerHTML += `<p> Você fez um total de ${placar} pontos, entre ${questions.length} questões S2 <p>`
+    status.innerHTML +=
+        `<button class="fns_btt" onclick= window.location.reload()>Reiniciar Quiz
+    </button>`
 
     $qst_box.appendChild(status)
 
