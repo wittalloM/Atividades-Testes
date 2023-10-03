@@ -8,7 +8,7 @@
 
 body {
 
-    background-color: #252422;
+    background-color: #22223b;
     font-family: "Onest", sans-serif;
 }
 
@@ -100,9 +100,8 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    background-color: #403d39;
+    background-color: #4a4e69;
     box-shadow: 1px 1px #eb5e28;
-    background-color: #403d39;
     border-radius: 10px;
 }
 
@@ -175,13 +174,13 @@ body {
 .stt-btt {
     padding: 10px 40px;
 
-    background-color: #fffcf2;
-    border: none;
+    
+    border: solid 2px #eb5e28;
     border-radius: 10px;
 
     font-size: 0.8rem;
     font-weight: 500;
-    color: #eb5e28;
+    color: #ffffff;
     cursor: pointer;
 
 }
@@ -195,14 +194,16 @@ body {
     border: none;
     border-radius: 10px;
 
+    transition: 0.2s;
+
 }
 
 .nxt-btt {
     padding: 10px 40px;
     margin: 1rem 0rem;
 
-    background-color: #fffcf2;
-    border: none;
+  
+    border: solid 2px #eb5e28;
     border-radius: 10px;
 
     font-size: 0.8rem;
@@ -215,9 +216,10 @@ body {
     color: #101010;
 
     background-color: #fb8500;
-    box-shadow: 0 0 1px 2px #ffffff;
     border: none;
     border-radius: 10px;
+    
+    transition: 0.2s;
 
 }
 
@@ -227,7 +229,7 @@ body {
     margin: 1rem 0rem;
 
     color: #eb5e28;
-    background-color: #403d39;
+    background-color: #4a4e69;
 
 
     display: flex;
@@ -251,7 +253,7 @@ body {
     justify-content: space-around;
 
     font-weight: 400;
-    color: #eb5e28;
+    color: #ffffff;
 }
 
 .status-box h3 {
@@ -272,13 +274,13 @@ body {
 .fns-btt {
     padding: 10px 40px;
 
-    background-color: #fffcf2;
-    border: none;
+    
+    border: solid 2px #eb5e28;
     border-radius: 10px;
 
     font-size: 0.8rem;
     font-weight: 500;
-    color: #eb5e28;
+    color: #ffffff;
     cursor: pointer;
 
 }
@@ -291,6 +293,8 @@ body {
     background-color: #fb8500;
     border: none;
     border-radius: 10px;
+
+    transition: 0.2s;
 
 }
 
