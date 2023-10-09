@@ -8,38 +8,41 @@
 
 body {
 
-    background-color: #22223b;
+    background-color: #06141b;
     font-family: "Onest", sans-serif;
 }
 
 
 .cab-box {
-    margin: 30px 0px;
+    margin: 0.8rem 0rem;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    border-bottom: solid 2px #4a5c6a;
 }
 
 
 
 
 .icon-box {
-    margin: 0rem -10rem;
+    margin: 0.5rem 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-self: flex-start;
+
+
+    background-size: cover;
 }
 
 
 .logoimg {
-    height: 30%;
-    width: 30%;
+    height: 20%;
+    width: 25%;
 
-    border-radius: 90%;
+
     image-rendering: optimizeQuality;
 }
 
@@ -65,10 +68,10 @@ body {
     margin: 0px 25px;
 
     font-size: 0.8rem;
-    color: #fffcf2;
+    color: #fb8500;
 
-    border: 2px solid #fb8500;
-    border-radius: 10px;
+    background-color: #4a5c6a;
+    border-radius: 5px;
 }
 
 .link-box li:hover {
@@ -76,11 +79,11 @@ body {
     margin: 0px 25px;
 
     font-weight: 500;
-    color: #fffcf2;
+    color: #4a5c6a;
 
     background-color: #fb8500;
-    border-radius: 10px;
-    transition: 0.4s;
+    border-radius: 5px;
+    transition: 0.5s;
 }
 
 .link-box :any-link {
@@ -100,8 +103,8 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    background-color: #4a4e69;
-    box-shadow: 1px 1px #eb5e28;
+    background-color: #11212d;
+    box-shadow: 1px 1px 0.5 #eb5e28;
     border-radius: 10px;
 }
 
@@ -109,7 +112,7 @@ body {
     margin: 2rem 0rem;
 
     font-size: 1.2rem;
-    font-family: "Pixelify sans", cursive;
+    font-family: "Onest", sans-serif;
     font-weight: 200;
     color: #fb8500;
 }
@@ -141,21 +144,21 @@ body {
     margin: 10px 0px;
     padding: 10px 20px;
 
-    background-color: #fb8500;
-    border: none;
-    border-radius: 15px;
+    background: none;
+    border: solid 2px #eb5e28;
+    border-radius: 10px;
 
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-family: 'Onest', sans-serif;
-    color: #101010;
+    color: #ffffff;
 }
 
 .asw-btt:hover {
     font-size: 110%;
     transition: 0.3s;
 
-    background-color: #ffffff;
-    color: #fb8500;
+    background-color: #eb5e28;
+    color: #101010;
 }
 
 .asw-btt:disabled {
@@ -174,7 +177,7 @@ body {
 .stt-btt {
     padding: 10px 40px;
 
-    
+    background: none;
     border: solid 2px #eb5e28;
     border-radius: 10px;
 
@@ -188,7 +191,7 @@ body {
 
 .stt-btt:hover {
     font-weight: 500;
-    color: #101010;
+    color: #ffffff;
 
     background-color: #fb8500;
     border: none;
@@ -202,23 +205,23 @@ body {
     padding: 10px 40px;
     margin: 1rem 0rem;
 
-  
+    background: none;
     border: solid 2px #eb5e28;
     border-radius: 10px;
 
     font-size: 0.8rem;
-    font-weight: 500;
-    color: #eb5e28;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .nxt-btt:hover {
-    font-weight: 500;
+    font-weight: bold;
     color: #101010;
 
     background-color: #fb8500;
     border: none;
     border-radius: 10px;
-    
+
     transition: 0.2s;
 
 }
@@ -229,7 +232,7 @@ body {
     margin: 1rem 0rem;
 
     color: #eb5e28;
-    background-color: #4a4e69;
+    background-color: #11212d;
 
 
     display: flex;
@@ -268,13 +271,69 @@ body {
     margin: 0.5rem 0rem;
 
     font-size: 0.8rem;
-    color: #fffcf2;
+    color: #eb5e28;
 }
+
+.form-user-info {
+    background-color: #11212d;
+    border-radius: 10px;
+
+    padding: 10px;
+    margin: 1rem 0.8rem;
+    display: grid ;
+    grid-template-columns: auto auto;
+    gap: 20px;
+
+
+}
+
+.form-1{
+    padding: 10px;
+    margin: 0rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.form-item input {
+
+    height: 20px;
+    max-width: 400px;
+    margin: 0.5rem 0rem;
+
+    background-color: #4a5c6a;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 0px #eb5e28;
+    color: whitesmoke;
+    cursor: text
+}
+
+.form-item label {
+    color: whitesmoke;
+}
+
+.form-user-info h2 {
+    padding: 20px 10px;
+    margin: 1rem;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: flex-start;
+    
+    color: #eb5e28;
+    font-size: 1.2rem;
+}
+
+
 
 .fns-btt {
     padding: 10px 40px;
 
-    
+    background: none;
     border: solid 2px #eb5e28;
     border-radius: 10px;
 

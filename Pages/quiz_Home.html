@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/quiz_Home.css">
-    <link rel="icon" type="image/png" sizes="48x48" href="../Arts/logo_QuizTab.png" >
+    <link rel="icon" type="image/png" sizes="48x48" href="../Arts/logo_QuizTab.png">
     <title>Quiz-Home</title>
 </head>
 
 <body>
+
     <header class="cab-box">
 
         <div class="icon-box">
-            <img class="logoimg" src="../Arts/logo_Quiz1.png" />
+            <img class="logoimg" src="../Arts/logo2_quiz.png" />
         </div>
         <nav class="link-box">
             <ol>
@@ -27,12 +28,6 @@
         </nav>
     </header>
 
-    <container class="form-user-info hide">
-        <form class="form-1">
-            <label for="name"></label><input type="text" id="name" name="name" />
-            <label for="age"></label><input type="number" id="age" name="idade" />
-        </form>
-    </container>
 
     <container class="main-content">
 
@@ -55,6 +50,20 @@
 
     </container>
 
+    <container id="form-usr" class="form-user-info ">
+       <div class="title-form">
+        <h2>Preencha o formulário com as suas informações para entrar no nosso Ranking ... ;)</h2>
+       </div>
+        <form class="form-1">
+            <div class="form-item">
+                <label for="name">Nome : </label><input type="text" id="name" name="name" />
+            </div>
+            <div class="form-item">
+                <label for="age">Idade : </label>
+                <input type="number" id="age" name="idade" />
+            </div>
+        </form>
+    </container>
 
     <footer class="ftt-box">
         <h2> - Kage Quiz | Dev by ©Wittallo Marcos - </h2>
@@ -62,6 +71,7 @@
 
 
     <script defer src="../Scripts/nQuiz.js" type="module" async></script>
+
 </body>
 
 </html>

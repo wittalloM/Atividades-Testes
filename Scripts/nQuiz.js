@@ -6,6 +6,7 @@ const $qst_txt = document.getElementById('qst-enun')
 const $asw_box = document.getElementById('answers-box')
 const $stt_btt = document.getElementById('stt-btt')
 const $nxt_btt = document.getElementById('nxt-btt')
+const formUsr = document.getElementById('form-usr')
 
 var placar = 0
 var currentIndex = 0
@@ -64,7 +65,7 @@ function Select_asw(e) {
     let usr_resp = e.target
     if (usr_resp.dataset.correct) {
         document.body.classList.add('correct-asw')
-        placar++
+        placar++;
     }
     else {
         document.body.classList.add('incorrect-asw')
@@ -72,6 +73,7 @@ function Select_asw(e) {
 
 
     document.querySelectorAll('.answers').forEach(button => {
+
 
         if (button.dataset.corect) {
             button.classList.remove('asw-btt')
@@ -110,21 +112,41 @@ function End_Game() {
     $qst_txt.classList.add('hide')
     $asw_box.classList.add('hide')
     $nxt_btt.classList.add('hide')
-    $stt_btt.classList.remove('hide')
-    $stt_btt.textContent = 'Reiniciar Quiz'
+   let message = ''
+
+    switch (true) {
+
+        case (placar == 6):
+            message = 'Desempenho Excelente'
+            break;
+        case (placar <= 4):
+            message = 'Desempenho Bom'
+            break;
+        case (placar <= 2 ):
+            message = 'Desempanho Fraco'
+            break;
+
+        default:
+            message = 'Parabéns'
+    }
 
     let status = document.createElement('div')
     status.classList.add('status-box')
     status.innerHTML = `<h3>Parabéns, voçê conseguiu chegar ao final do nosso quiz !</h3>`
     status.innerHTML += `<p> Você fez um total de ${placar} pontos, entre ${questions.length} questões S2 <p>`
+    status.innerHTML += `${message}`
     status.innerHTML +=
-        `<button class="fns_btt" onclick= window.location.reload()>Reiniciar Quiz
+        `<button class="fns-btt" onclick= window.location.reload()>Reiniciar Quiz
     </button>`
 
     $qst_box.appendChild(status)
 
+    CadUsr()
+
 }
 
 
-
+ function CadUsr () {
+formUsr.classList.remove('hide')
+ }
 
