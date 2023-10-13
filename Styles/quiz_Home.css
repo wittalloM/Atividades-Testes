@@ -66,6 +66,9 @@ body {
 .link-box li {
     padding: 10px;
     margin: 0px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
     font-size: 0.8rem;
     color: #fb8500;
@@ -73,6 +76,7 @@ body {
     background-color: #4a5c6a;
     border-radius: 5px;
 }
+
 
 .link-box li:hover {
     padding: 10px;
@@ -91,6 +95,11 @@ body {
     color: #fffcf2;
 }
 
+/*ìcones de atalhos - cab */
+
+.fa-solid {
+    margin: 0px 4px;
+}
 
 .main-content {
     height: auto;
@@ -278,54 +287,66 @@ body {
     background-color: #11212d;
     border-radius: 10px;
 
-    padding: 10px;
+    padding: 20px;
     margin: 1rem 0.8rem;
-    display: grid ;
+    display: grid;
     grid-template-columns: auto auto;
     gap: 20px;
 
 
 }
 
-.form-1{
-    padding: 10px;
+.form-1 {
+    padding: 10px 10px;
     margin: 0rem 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    background-color: #06141b;
+    border-radius: 8px;
 }
 
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
 
 .form-item input {
-
+    padding: 5px;
     height: 20px;
     max-width: 400px;
-    margin: 0.5rem 0rem;
 
-    background-color: #4a5c6a;
-    border: none;
-    border-radius: 2px;
-    box-shadow: 1px 1px 1px 0px #eb5e28;
+    border: solid 1px #4a5c6a;
+    background: none;
+    border-radius: 5px;
     color: whitesmoke;
     cursor: text
 }
 
 .form-item label {
+    margin: 0.5rem 0rem;
+    font-size: 0.8em;
     color: whitesmoke;
 }
 
-.form-user-info h2 {
-    padding: 20px 10px;
-    margin: 1rem;
-    
+.title-form {
+    padding: 20px 20px;
+    margin: 0.5em 0em;
+
     flex-direction: row;
     flex-wrap: wrap;
     text-align: left;
     align-items: flex-start;
-    
+    box-shadow: 1px 1px 0px #fb8500;
+    border-radius: 5px;
+
+}
+
+.title-form h2 {
     color: #eb5e28;
     font-size: 1.2rem;
+
 }
 
 

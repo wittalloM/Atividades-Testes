@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/quiz_Home.css">
     <link rel="icon" type="image/png" sizes="48x48" href="../Arts/logo_QuizTab.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <title>Quiz-Home</title>
 </head>
 
@@ -19,9 +20,11 @@
         <nav class="link-box">
             <ol>
                 <li>
-                    <a href="./quiz_Home.html">Home</a>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <a href="../Pages/quiz_Home.html">Home</a>
                 </li>
                 <li>
+                    <i class="fa-solid fa-pen-to-square"></i>
                     <a href="">Placares</a>
                 </li>
             </ol>
@@ -44,23 +47,25 @@
             <button class="asw-btt answer">Resp 4</button>
         </div>
         <div class="controls-box">
-            <button id="stt-btt" class="stt-btt ">Iniciar Quiz</button>
+            <button id="stt-btt" class="stt-btt"><i class="fa-solid fa-gamepad" title="Inicar Quiz"></i>Iniciar
+                Quiz</button>
             <button id="nxt-btt" class="nxt-btt hide">Próxima Questão</button>
         </div>
 
     </container>
 
     <container id="form-usr" class="form-user-info ">
-       <div class="title-form">
-        <h2>Preencha o formulário com as suas informações para entrar no nosso Ranking ... ;)</h2>
-       </div>
+        <div class="title-form">
+            <h2>Preencha o formulário com as suas informações para entrar no nosso Ranking ... ;)</h2>
+        </div>
         <form class="form-1">
             <div class="form-item">
-                <label for="name">Nome : </label><input type="text" id="name" name="name" />
+                <label for="name">Nome : </label>
+                <input type="text" id="name" name="name" placeholder="Digite o seu nome:" />
             </div>
             <div class="form-item">
                 <label for="age">Idade : </label>
-                <input type="number" id="age" name="idade" />
+                <input type="number" id="age" name="idade" placeholder="digite a sua idade: (2 dígitos)" />
             </div>
         </form>
     </container>

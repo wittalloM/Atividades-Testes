@@ -134,7 +134,7 @@ function End_Game() {
     status.classList.add('status-box')
     status.innerHTML = `<h3>Parabéns, voçê conseguiu chegar ao final do nosso quiz !</h3>`
     status.innerHTML += `<p> Você fez um total de ${placar} pontos, entre ${questions.length} questões S2 <p>`
-    status.innerHTML += `${message}`
+    status.innerHTML += `<p>${message}</p>`
     status.innerHTML +=
         `<button class="fns-btt" onclick= window.location.reload()>Reiniciar Quiz
     </button>`
