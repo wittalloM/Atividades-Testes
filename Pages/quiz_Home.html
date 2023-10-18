@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/quiz_Home.css">
     <link rel="icon" type="image/png" sizes="48x48" href="../Arts/logo_QuizTab.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <title>Quiz-Home</title>
 </head>
 
@@ -20,7 +19,7 @@
         <nav class="link-box">
             <ol>
                 <li>
-                    <i class="fa-solid fa-gamepad"></i>
+                    <i class="fa-solid fa-house"></i>
                     <a href="../Pages/quiz_Home.html">Home</a>
                 </li>
                 <li>
@@ -35,7 +34,7 @@
     <container class="main-content">
 
         <div class="ttl-box">
-            <h1>Dattebayo Quiz</h1>
+            <h2>Dattebayo Quiz</h2>
         </div>
         <div id="question-box" class="question-box hide">
             <h1 id="qst-enun">A pergunta será exibida aqui !</h1>
@@ -47,26 +46,35 @@
             <button class="asw-btt answer">Resp 4</button>
         </div>
         <div class="controls-box">
-            <button id="stt-btt" class="stt-btt"><i class="fa-solid fa-gamepad" title="Inicar Quiz"></i>Iniciar
+            <button id="stt-btt" title="Iniciar" class="stt-btt"><i class="fa-solid fa-gamepad"
+                    title="Inicar Quiz"></i>Iniciar
                 Quiz</button>
-            <button id="nxt-btt" class="nxt-btt hide">Próxima Questão</button>
+            <button id="nxt-btt" class="nxt-btt hide" title="Próxima Questão">Próxima Questão<i
+                    class="fa-solid fa-angle-rigth"></i></button>
         </div>
 
     </container>
 
-    <container id="form-usr" class="form-user-info ">
+    <container id="form-usr" class="form-user-info hide ">
         <div class="title-form">
             <h2>Preencha o formulário com as suas informações para entrar no nosso Ranking ... ;)</h2>
         </div>
         <form class="form-1">
+            <h5>Resgistre-se</h5>
             <div class="form-item">
-                <label for="name">Nome : </label>
-                <input type="text" id="name" name="name" placeholder="Digite o seu nome:" />
+                <label for="name">Nome <i class="fa-solid fa-user-plus"></i> : </label>
+                        <input type="text" id="name" name="name" placeholder="Digite o seu nome:" />
             </div>
             <div class="form-item">
-                <label for="age">Idade : </label>
-                <input type="number" id="age" name="idade" placeholder="digite a sua idade: (2 dígitos)" />
+                <label for="age">Idade <i class="fa-solid fa-calendar"></i> : </label>
+                        <input type="number" id="age" name="idade" placeholder="digite a sua idade: (2 dígitos)" />
             </div>
+
+
+            <button type="button" class="form-btt" id="form-btt" title="Adicionar Placar">
+                <i class="fa-solid fa-square-plus"></i> Adicionar Placar
+            </button>
+
         </form>
     </container>
 
@@ -76,6 +84,7 @@
 
 
     <script defer src="../Scripts/nQuiz.js" type="module" async></script>
+    <script src="https://kit.fontawesome.com/6fbc2ca5fd.js" crossorigin="anonymous"></script>
 
 </body>
 

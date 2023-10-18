@@ -120,7 +120,6 @@ body {
 .ttl-box {
     margin: 2rem 0rem;
 
-    font-size: 1.2rem;
     font-family: "Onest", sans-serif;
     font-weight: 200;
     color: #fb8500;
@@ -285,6 +284,7 @@ body {
 
 .form-user-info {
     background-color: #11212d;
+    color: whitesmoke;
     border-radius: 10px;
 
     padding: 20px;
@@ -293,6 +293,26 @@ body {
     grid-template-columns: auto auto;
     gap: 20px;
 
+
+}
+
+.title-form {
+    padding: 20px 20px;
+    margin: 0.5em 0em;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 0px #fb8500;
+    border-radius: 5px;
+
+}
+
+.title-form h2 {
+    color: #eb5e28;
+    font-size: 1.2rem;
 
 }
 
@@ -325,29 +345,41 @@ body {
 }
 
 .form-item label {
-    margin: 0.5rem 0rem;
+    margin-bottom: -0.1rem;
+    margin-top: 0.5rem;
+
     font-size: 0.8em;
-    color: whitesmoke;
-}
-
-.title-form {
-    padding: 20px 20px;
-    margin: 0.5em 0em;
-
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: left;
-    align-items: flex-start;
-    box-shadow: 1px 1px 0px #fb8500;
-    border-radius: 5px;
-
-}
-
-.title-form h2 {
     color: #eb5e28;
-    font-size: 1.2rem;
+}
+
+.form-btt {
+    margin: 0.5rem 0rem;
+    padding: 5px 10px;
+
+    background: none;
+    border: solid 1px #eb5e28;
+    border-radius: 10px;
+
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
 
 }
+
+
+.form-btt:hover {
+    font-weight: 500;
+    color: #ffffff;
+
+    background-color: #fb8500;
+    border: none;
+    border-radius: 10px;
+
+    transition: 0.2s;
+
+}
+
 
 
 
