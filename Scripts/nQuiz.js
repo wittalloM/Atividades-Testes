@@ -147,6 +147,7 @@ function End_Game() {
 
 
  function CadUsr () {
+    window.alert('Preencha o formulário abaixo, para se cadastrar em nosso Ranking')
 formUsr.classList.remove('hide')
  }
 
