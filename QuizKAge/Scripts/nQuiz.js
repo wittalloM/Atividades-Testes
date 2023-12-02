@@ -1,5 +1,5 @@
 
-import questions from './questions.js'
+import questions from '../Scripts/questions.js'
 
 const $qst_box = document.getElementById('question-box')
 const $qst_txt = document.getElementById('qst-enun')
@@ -136,7 +136,7 @@ function End_Game() {
     status.innerHTML += `<p> Você fez um total de ${placar} pontos, entre ${questions.length} questões S2 <p>`
     status.innerHTML += `<p>${message}</p>`
     status.innerHTML +=
-        `<button class="fns-btt" onclick= window.location.reload()>Reiniciar Quiz
+        `<button class="fns-btt" onclick= window.location.reload()><i class="fa-solid fa-window-restore"></i>Reiniciar Quiz
     </button>`
 
     $qst_box.appendChild(status)
