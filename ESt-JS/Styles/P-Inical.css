@@ -1,20 +1,19 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Raleway:wght@700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
-    
+
     background-color: rgb(0, 0, 0, 0.9);
-    
+
     font-family: "Hedvig Letters Sans", sans-serif;
     color: aliceblue;
 }
 
+/*Caixa Principal*/
 .Conteudo-Principal {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20vh 75vh 5vh;
+    grid-template-columns: repeat(auto-fit, minman(300px, 1fr));
     grid-template-areas: "Cabecalho Cabecalho Cabecalho"
         "Form-User Cont-Principal Cont-Principal"
         "Rodape Rodape Rodape";
@@ -25,37 +24,60 @@ body {
 
 }
 
+/*Cabeçalho-Menu*/
 .Cabecalho {
-    padding: 20px;
+    margin: 10px 0px;
+    margin-bottom: 1rem;
+    background-color: #202020;
+    display: grid;
     grid-area: "Cabecalho";
     grid-column-start: 1;
     grid-column-end: 4;
-    place-self: center;
+    place-content: space-around center;
+    place-items: center;
 }
 
 .Titulo-Cab {
-    margin: 0rem -4rem;
-    display: flex;
-    align-items: center;
-    justify-self: left;
-    text-align: center;
+    margin: 0.8rem 0rem;
+    align-self: center;
+    justify-self: center;
 }
 
-.Lista-Links ul {
-    text-decoration: none;
+.Titulo-Cab img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+
+
+.LL-Lista {
     list-style: none;
     display: flex;
+
+}
+
+.LL-Lista :any-link {
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: baseline;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: aliceblue;
+    transition: 0.4s;
+
 }
 
-.Lista-Links ul li {
-    margin: 10px 20px;
+.LL-Lista :any-link:hover {
+    background-color: #FF312E;
+    border-radius: 10px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: aliceblue;
 }
 
+/*Formulário-Usuário*/
 .Form-User {
-    margin-left: 1rem;
+    margin: 0.2rem 0.5rem;
     grid-column-start: 1;
     grid-column-end: 2;
     background-color: #2b2b2b;
@@ -63,18 +85,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
 
+.Form-User i {
+    margin: 0rem 0.2rem;
 }
 
 .Form-Campos {
-    display: flex;
-    background-color: #202020;
-    border-radius: 5px;
-    flex-direction: column;
-    align-items: flex-start;
     margin: 0.5rem 0.5rem;
     padding: 10px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: #202020;
+    border-radius: 5px;
+    color: #FF312E;
+    font-size: 0.8rem;
 }
 
 .Form-Campos input {
@@ -86,88 +114,151 @@ body {
     color: black;
 }
 
-.Titulos1 {
-    padding: 10px;
+.Form-User-Titulo {
+    padding: 5px;
     margin: 0.5rem 0.5rem;
+    font-size: 15px;
+    border-radius: 5px;
+}
 
+.Form-User-Titulo h2 {
     display: flex;
     align-self: baseline;
     text-align: start;
-    font-family: "Helvetica", sans-serif;
-    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+}
 
+.Btt-Form-User {
+    margin: 0.5rem 0.8rem;
+    padding: 10px 10px;
 
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
 
+    border: none;
+    border-radius: 10px;
+    background-color: #707070;
+}
+
+.Btt-Form-User:hover {
+    filter: brightness(0.5)
 }
 
 
-.Ia-Adv-Idade {
-    padding: 10px;
-    margin-right: 1rem;
+/*Formulário-Imc*/
+.Imc-Principal {
+
+    margin-right: 0.5rem;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 4;
-    background-color: #2b2b2b;
     border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+    place-items: center space-around;
+    place-content: center;
 
 }
 
-.Titulo-Ia-Adv {
-    padding: 10px;
-    
-    display: flex;
-    flex-wrap: wrap;
-    text-align: left;
-    justify-self: start;
-    
-    color: rgb(13, 64, 88);
-    
-    font-family: "Railway", sans-serif;
+.Imc-Titulo {
+    text-align: start;
+
+    place-content: start;
+
+    color: #FF312E;
+    font-family: "Raleway", sans-serif;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.Ia-Adv-Inputs {
-    padding: 10px;
+.Imc-Inputs {
+
     margin: 0.5rem 0rem;
+    padding: 10px 10px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-self: center;
+    justify-content: center;
+
+    font-size: 0.8rem;
+    font-weight: bold;
 
     background-color: #202020;
     border-radius: 5px;
 }
 
+/*ìcones-formulário-IMC*/
+.Imc-Inputs i {
+    margin: 0rem 0.2rem;
+}
 
-.Ia-Adv-Inputs input {
+.Imc-Inputs input {
     margin: 0.5rem 0rem;
     padding: 5px;
     background-color: #707070;
     border: none;
     border-radius: 5px;
-    color: rgb(13, 64, 88);
+    color: rgb(248, 249, 250);
 }
 
 
-.Artigo-Texto1 {
+.Btt-Form-Imc {
 
+    margin: 0.8rem 0rem;
+    padding: 10px 15px;
+
+    display: flex;
+    justify-content: center;
+
+    border: none;
+    border-radius: 10px;
+    background-color: #707070;
+    transition: 0.4s;
+
+}
+
+.Btt-Form-Imc:hover {
+    background-color: #FF312E;
+    border-radius: 10px;
+
+}
+
+
+.Resp-Imc {
+    margin: 0.8rem 0rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+
+
+/*Texto-Imc*/
+.Artigo-Texto1 {
+    margin: 4rem 0rem;
     font-size: 14px;
     text-align: left;
+
 }
 
-.Artigo-Texto1 h2 {
-    font-size: 15px;
+.Artigo-Texto1-Titulo {
+    margin: 1rem 0rem;
+    font-size: 25px;
+
 }
 
 
+.Artigo-Texto1-Subtitulo {
+    margin: 0.5rem 0rem;
+    font-size: 20px;
+
+}
+
+/*Rodape*/
 .Rodape {
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
 
     display: grid;
     grid-area: "Rodape";
@@ -181,4 +272,8 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
+}
+
+.hide {
+    display: none;
 }

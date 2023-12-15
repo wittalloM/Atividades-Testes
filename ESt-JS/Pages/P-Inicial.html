@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/P-Inical.css">
-    <title>EST-JS</title>
+    <link rel="icon" href="../Styles/Imagens/LogoJs1.jpg">
+    <script src="https://kit.fontawesome.com/6fbc2ca5fd.js" crossorigin="anonymous"></script>
+    <title>Estudos Java-JS</title>
 </head>
+
 <body>
-    
+
     <container class="Conteudo-Principal">
         <div class="Cabecalho">
             <div class="Titulo-Cab">
-                <h4>Estudos Js</h4>
+                <img src="../Styles/Imagens/LogoJs1.jpg">
             </div>
             <div class="Lista-Links">
-                <ul>
-                    <li>Home</li>
-                    <li>Info</li>
-                    <li>A Estrada</li>
+                <ul class="LL-Lista">
+                    <li><a href="../Pages/P-Inicial.html">Home</a></li>
+                    <li><a href="">Info</a></li>
+                    <li><a href>A Estrada</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="Form-User">
-            <div class="Titulos1">
-                <h2>Nos fale mais sobre você...</h2>
+            <div class="Form-User-Titulo">
+                <h2>Assine a nossa News Letter.</h2>
+                <p>Oferemos aos nossos usários, artigos, matérias e materias relevantes em relatoórios informativos
+                    semanais, confira !</p>
             </div>
 
-           <div class="Form-Campos">
-            <label for="name"> Nome :
-                <input title="Campo - Name" type="text" id="name" class="form-item1">
-            </label>
-            <label for="email">Email :
-                <input title="Campo - Email" type="text" id="email" class="form-item1">
-            </label>
-           </div>
+            <div class="Form-Campos">
+                <label for="name"> Nome <i class="fa-solid fa-user"></i> :
+                    <input title="Campo - Name" type="text" id="name" class="form-item1">
+                </label>
+                <label for="email"> Email <i class="fa-solid fa-envelope"></i> :
+                    <input title="Campo - Email" type="text" id="email" class="form-item1">
+                </label>
+
+            </div>
+            <button id="Btt-Form-User" class="Btt-Form-User" title="Botão de Envio - User Info">Prosseguir <i
+                    class="fa-solid fa-user-check"></i> </button>
 
         </div>
 
-        <section class="Ia-Adv-Idade">
-            <div class="Titulo-Ia-Adv">
+        <section class="Imc-Principal">
+            <div class="Imc-Titulo">
                 <h3>Avalie a sua condição física em passos simples ! </h3>
             </div>
-            <div class="Ia-Adv-Inputs">
-                <label for="name"> Nome :
-                    <input title="Campo - Name" type="text" id="name" class="Ia-Adv-item">
+            <div class="Imc-Inputs">
+                <label for="name"> Nome<i class="fa-solid fa-note-sticky"></i> :
+                    <input required maxlenght = "75" title="Campo - Name" type="text" id="name-Imc" class="Imc-item">
                 </label>
-                <label for="Peso">Peso :
-                    <input title="Campo - Peso" type="number" id="Peso" class="Ia-Adv-item">
+                <label for="Peso"> Peso<i class="fa-solid fa-scale-balanced"></i> :
+                    <input required maxlenght = "2" title="Campo - Peso" type="number" id="peso-Imc" class="Imc-Item">
                 </label>
+                <label for="Alt"> Altura<i class="fa-solid fa-arrow-up-9-1"></i> :
+                    <input required maxlenght = "3" title="Campo - Altura" type="number" id="alt-Imc" class="Imc-Item">
+                </label>
+                <button id="Btt-Form-Imc" class="Btt-Form-Imc" title="Botão, para verificacção de IMC">Prosseguir <i
+                        class="fa-solid fa-clipboard-check"></i> </button>
+
+                <div id="Resp-Imc" class="Resp-Imc">
+
+                </div>
             </div>
-            <article class="Artigo-Texto1">
-                <p>Benefícios da análise de xape 7000</p>
-                <h2><strong>Veja:</strong></h2>
-                <h2><strong>5 motivos pra te convencer a nos ceder os dados para no nosso analisador de IMC 7000</strong></h2>
+
+            <article id="Artigo-Texto1" class="Artigo-Texto1">
+
+                <h2 class="Artigo-Texto1-Titulo"><strong>Veja:</strong></h2>
+                <h2 class="Artigo-Texto1-Subtitulo"> Motivos que vão te convencer a querer aproveitar todos os insigths
+                    do IMC 7000.</h2>
                 <ul>
                     <li>
-                        Utilizando o nosso analisador você descobrirá o quão fora ou abaixo do peso estará, permitindo que você escolha a mellhor forma de lidar com os resultados
+                        Utilizando o nosso analisador você descobrirá o quão fora ou abaixo do peso estará, permitindo
+                        que você escolha a mellhor forma de lidar com os resultados.
                     </li>
                     <li>
-                        Receba em seu email um informe completo com dicas, promoções e vídeos cheios de informações e conhecimento sobre, uma vida saúdavel.
+                        Receba em seu email um informe completo com dicas, promoções e vídeos cheios de informações e
+                        conhecimento sobre, uma vida saúdavel.
                     </li>
-                    <li>
-                        Profissionais capacitados terão acesso aos seus dados e históricos, podendo te fornecer um plano de apoio completo.
-                    </li>
+
                 </ul>
             </article>
         </section>
@@ -76,4 +96,7 @@
     </footer>
 
 </body>
+
+<script defer src="../Scripts/Est-jsScripts.js"></script>
+
 </html>
