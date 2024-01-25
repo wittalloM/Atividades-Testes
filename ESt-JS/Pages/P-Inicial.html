@@ -15,13 +15,13 @@
     <container class="Conteudo-Principal">
         <div class="Cabecalho">
             <div class="Titulo-Cab">
-                <img src="../Styles/Imagens/LogoJs1.jpg">
+                <img title="Logo - EstJs " src="../Styles/Imagens/LogoJs1.jpg">
             </div>
             <div class="Lista-Links">
                 <ul class="LL-Lista">
-                    <li><a href="../Pages/P-Inicial.html">Home</a></li>
-                    <li><a href="">Info</a></li>
-                    <li><a href>A Estrada</a></li>
+                    <li class="Cab-Menu-Item"><a href="../Pages/P-Inicial.html">Home</a></li>
+                    <li class="Cab-Menu-Item"><a href="">Info</a></li>
+                    <li class="Cab-Menu-Item"><a href>A Estrada</a></li>
                 </ul>
             </div>
         </div>
@@ -35,34 +35,52 @@
 
             <div class="Form-Campos">
                 <label for="name"> Nome <i class="fa-solid fa-user"></i> :
-                    <input title="Campo - Name" type="text" id="name" class="form-item1">
+                    <input placeholder="Digite o seu nome " title="Campo - Name" type="text" id="name"
+                        class="form-item1">
                 </label>
                 <label for="email"> Email <i class="fa-solid fa-envelope"></i> :
-                    <input title="Campo - Email" type="text" id="email" class="form-item1">
+                    <input placeholder="Informe o seu email" title="Campo - Email" type="text" id="email"
+                        class="form-item1">
                 </label>
 
+                <button id="Btt-Form-User" class="Btt-Form-User" title="Botão de Envio - User Info">Prosseguir <i
+                        class="fa-solid fa-user-check"></i> </button>
             </div>
-            <button id="Btt-Form-User" class="Btt-Form-User" title="Botão de Envio - User Info">Prosseguir <i
-                    class="fa-solid fa-user-check"></i> </button>
+
 
         </div>
 
         <section class="Imc-Principal">
+            <div class="Banner-Imc">
+                <img src="../Styles/Imagens/ImcBanner1-Mk.png">
+            </div>
             <div class="Imc-Titulo">
                 <h3>Avalie a sua condição física em passos simples ! </h3>
             </div>
-            <div class="Imc-Inputs">
-                <label for="name"> Nome<i class="fa-solid fa-note-sticky"></i> :
-                    <input required maxlenght = "75" title="Campo - Name" type="text" id="name-Imc" class="Imc-item">
-                </label>
-                <label for="Peso"> Peso<i class="fa-solid fa-scale-balanced"></i> :
-                    <input required maxlenght = "2" title="Campo - Peso" type="number" id="peso-Imc" class="Imc-Item">
-                </label>
-                <label for="Alt"> Altura<i class="fa-solid fa-arrow-up-9-1"></i> :
-                    <input required maxlenght = "3" title="Campo - Altura" type="number" id="alt-Imc" class="Imc-Item">
-                </label>
+            <div id="Form-Imc" class="Imc-Form-Campos">
+                <h2 class="Titulo-Form2">Cadastre-se ;)</h2>
+                <div class="Imc-Campos">
+                    <label for="name"> Nome<i class="fa-solid fa-note-sticky"></i> :
+                        <input name="Imput-Imc" placeholder="Digite o seu Nome completo " required maxlenght="75" title="Campo - Name"
+                            type="text" id="name-Imc" class="Imc-item">
+                    </label>
+                </div>
+                <div class="Imc-Campos">
+                    <label for="Peso"> Peso<i class="fa-solid fa-scale-balanced"></i> :
+                        <input name="Imput-Imc" placeholder="Digite o seu peso em Kg" required maxlenght="2" title="Campo - Peso"
+                            type="number" id="peso-Imc" class="Imc-Item">
+                    </label>
+                </div>
+                <div class="Imc-Campos">
+                    <label for="Alt"> Altura<i class="fa-solid fa-arrow-up-9-1"></i> :
+                        <input name="Imput-Imc" placeholder="Digite a sua altura, Ex: 1.75" required maxlenght="4" title="Campo - Altura"
+                            type="number" id="alt-Imc" class="Imc-Item">
+                    </label>
+                </div>
                 <button id="Btt-Form-Imc" class="Btt-Form-Imc" title="Botão, para verificacção de IMC">Prosseguir <i
                         class="fa-solid fa-clipboard-check"></i> </button>
+                <button id="Resetar" class="Btt-Form-Imc" title="Resetar os dados">Resetar
+                    Formulário <i class="fa-solid fa-backward"></i> </button>
 
                 <div id="Resp-Imc" class="Resp-Imc">
 
@@ -71,15 +89,15 @@
 
             <article id="Artigo-Texto1" class="Artigo-Texto1">
 
-                <h2 class="Artigo-Texto1-Titulo"><strong>Veja:</strong></h2>
+                <h2 class="Artigo-Texto1-Titulo"><strong>Veja :</strong></h2>
                 <h2 class="Artigo-Texto1-Subtitulo"> Motivos que vão te convencer a querer aproveitar todos os insigths
                     do IMC 7000.</h2>
-                <ul>
-                    <li>
+                <ul class="Arttxt-Lista">
+                    <li class="Arttxt-item-lista">
                         Utilizando o nosso analisador você descobrirá o quão fora ou abaixo do peso estará, permitindo
                         que você escolha a mellhor forma de lidar com os resultados.
                     </li>
-                    <li>
+                    <li class="Arttxt-item-lista">
                         Receba em seu email um informe completo com dicas, promoções e vídeos cheios de informações e
                         conhecimento sobre, uma vida saúdavel.
                     </li>
