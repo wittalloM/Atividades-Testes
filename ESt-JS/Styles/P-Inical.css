@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter+Tight:wght@300;500&display=swap');
+
 
 body {
     margin: 0;
@@ -6,42 +7,64 @@ body {
 
     background-color: #000103;
 
-    font-family: "Hedvig Letters Sans", sans-serif;
+    font-family: "Inter Tight", sans-serif;
+    letter-spacing: 0.2px;
+    color: aliceblue;
+}
+
+.Titulo {
+    text-align: start;
+    color: #e2504e;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 20px;
+}
+
+.Titulo2 {
+    text-align: start;
+    color: burlywood;
+    font-family: "Inter tigh", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.Subtitulo {
+    text-align: start;
     color: #FFFFFF;
+    font-family: "Inter Tigh", sans-serif;
+    font-size: 12px;
 }
 
 /*Caixa Principal*/
 .Conteudo-Principal {
+    margin: 0.8rem 0.8rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 2fr));
-    grid-template-rows: repeat(auto-fit, minmax(min(100%, 100px), max(100%, 300px)));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 2fr));
+    grid-template-rows: repeat(auto-fit, minmax(min(100%, 100px), max(100%, 400px)));
+    gap: 10px;
+    place-items: stretch;
+    place-content: stretch center;
 
 }
 
 /*Cabeçalho-Menu*/
 .Cabecalho {
-    margin: 15px 0px;
+    margin-top: -12px -12px;
     margin-bottom: 1.5rem;
 
-
     display: grid;
-    grid-template-columns: 100px 1fr 1fr 1fr;
     grid-column-start: 1;
     grid-column-end: end;
-    place-content: center space-around;
-    place-items: stretch;
-
-    background-color: #101010;
+    place-content: stretch;
+    place-items: center space-around;
 }
 
-.Titulo-Cab {
+.Box-Logo {
     margin: 0.8rem 0.8rem;
     display: grid;
     grid-column: 1 / 2;
 }
 
-.Titulo-Cab img {
+.Box-Logo img {
     width: 60px;
     height: 60px;
     border-radius: 15px;
@@ -71,7 +94,7 @@ body {
     padding: 10px;
     display: flex;
     flex-direction: row;
-    
+
 }
 
 .Cab-Menu-Item :any-link {
@@ -79,7 +102,7 @@ body {
     text-decoration: none;
     letter-spacing: 1.5px;
     padding: 5px 15px;
-    margin:  10px;
+    margin: 10px;
     background-color: #222222;
     color: #e2504e;
     border-radius: 5px;
@@ -98,40 +121,59 @@ body {
 
 /*Formulário-Usuário*/
 .Form-User {
-    margin: 0rem 0.5rem;
-    margin-bottom: 0.8rem;
     background-color: #101010;
     border-radius: 5px;
     display: grid;
-    grid-row: 2 / 3;
-    place-content: start stretch;
-    place-items: center stretch;
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+    place-items: start space-around;
+    place-content: stretch;
+
+
 }
 
 .Form-User i {
     margin: 0rem 0.2rem;
+    color: #e2504e;
 }
 
 .Form-Campos {
-    margin: 0.5rem;
-    padding: 10px;
+    margin: 0rem 0.2rem;
+    padding: 5px;
 
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
 
-    background-color: #151515;
-    border-radius: 5px;
     font-size: 0.8rem;
+    letter-spacing: 0.2px;
 }
 
 .Form-Campos input {
     margin: 0.5rem 0rem;
     padding: 5px;
-    background-color: #242323;
-    border: none;
+    border: solid 1px #e2504e;
     border-radius: 5px;
-    color: aliceblue;
+    color: black;
 }
+
+.Form-Campos textarea{
+    width: auto;
+    box-sizing: border-box;
+    border: 2px solid #e2504e;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+.Form-Campos input:focus{
+    vertical-align: top;
+    color: #000;
+    border-color: #000;
+}
+
 
 .Form-User-Titulo {
     padding: 5px;
@@ -140,14 +182,6 @@ body {
     border-radius: 5px;
 }
 
-.Form-User-Titulo h2 {
-    display: flex;
-    align-self: baseline;
-    text-align: start;
-    font-family: "Raleway", sans-serif;
-    font-size: 1.2rem;
-    color: #e2504e;
-}
 
 .Btt-Form-User {
     margin: 0.5rem 0rem;
@@ -156,14 +190,16 @@ body {
     border: none;
     border-radius: 10px;
     background-color: #242323;
+    transition: 0.4s;
     color: #FFFFFF;
 }
 
 .Btt-Form-User:hover {
-    background-color: #FF312E;
-    font-size: 110%;
-    filter: brightness(0.8);
-    transition: 0.4s;
+    background-color: #e2504e;
+    font-size: 105%;
+    font-weight: 700;
+    filter: contrast(1.2);
+    color: black;
 }
 
 /*Banner*/
@@ -171,9 +207,9 @@ body {
 
 
 .Banner-Imc img {
-    margin-bottom: 10px;
-    height: auto;
-    width: auto;
+    margin-bottom: 5px;
+    height: 250px;
+    width: 200px;
     border-radius: 5px;
 
 }
@@ -182,30 +218,16 @@ body {
 /*Formulário-Imc*/
 .Imc-Principal {
 
-    margin: 0rem 0.5rem;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2 / 4;
     grid-column: 2 / end;
-    gap: 5px;
-    border-radius: 5px;
-    place-items: center;
-    place-content: center;
+    place-items: stretch center;
 
 }
 
-.Imc-Titulo {
-    text-align: start;
-    color: #e2504e;
-    font-family: "Raleway", sans-serif;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.Titulo-Form2 {
-    color: #e2504e;
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: "Helvetica", sans-serif;
-}
 
 .Imc-Form-Campos {
 
@@ -266,26 +288,45 @@ body {
 }
 
 .Btt-Form-Imc:hover {
-    background-color: #FF312E;
+    background-color: #e2504e;
     border-radius: 10px;
-    filter: brightness(0.8);
+    font-size: 105%;
+    font-weight: 700;
+    filter: contrast(1.1);
+    color: black;
 
 }
 
+.Btt-Reset:hover {
+    background: #e2504e;
+    border-radius: 10px;
+    filter: contrast(1.2);
+    color: #101010;
+}
 
-.Resp-Imc {
-    margin: 0.8rem 0rem;
-    font-size: 15px;
+*/ .Resp-Imc {
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: left;
-    color: aliceblue;
-    line-height: 105%;
-    place-content: center;
-    place-items: center;
+    font-size: 20px;
+    font-family: "Inter Tigh", sans-serif;
+    color: burlywood;
 
+
+}
+
+.Resp-Imc img {
+    display: flex;
+    margin: 0.5rem 0rem;
+    width: auto;
+    height: auto;
+    justify-self: center;
 }
 
 .enfase {
-    font-weight: bold;
     letter-spacing: 0.5px;
     color: #FF312E;
     filter: contrast(1.2);
@@ -295,8 +336,8 @@ body {
 
 /*Texto-Imc*/
 .Artigo-Texto1 {
-    margin: 1rem 0rem;
-    padding: 15px;
+    margin-top: 0.5rem;
+    padding: 10px 5px;
     background-color: #151515;
     border-radius: 5px;
     font-size: 12px;
@@ -307,29 +348,17 @@ body {
 
 }
 
-.Artigo-Texto1-Titulo {
-    margin: 1rem 0rem;
-    font-size: 20px;
-
-    color: #FF312E;
-
-}
-
-
-.Artigo-Texto1-Subtitulo {
-    margin: 0.5rem 0rem;
-    font-size: 20px;
-
-}
 
 /*Rodape*/
 .Rodape {
-    margin-top: 0.8rem;
+    margin-top: 1.5rem;
     display: grid;
-    place-content: center;
+    place-items: center;
     grid-column-start: 1;
     grid-column-end: end;
-    background-color: #101010;
+    background-color: #974b49;
+    color: burlywood;
+    font-family: "Archivo Black", sans-serif;
 }
 
 .Texto-Rodape {

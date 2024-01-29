@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/P-Inical.css">
-    <link rel="icon" href="../Styles/Imagens/LogoJs1.jpg">
+    <link rel="icon" href="../Styles/Imagens/Logo3-Imc.png">
     <script src="https://kit.fontawesome.com/6fbc2ca5fd.js" crossorigin="anonymous"></script>
     <title>Estudos Java-JS</title>
 </head>
@@ -14,8 +14,8 @@
 
     <container class="Conteudo-Principal">
         <div class="Cabecalho">
-            <div class="Titulo-Cab">
-                <img title="Logo - EstJs " src="../Styles/Imagens/LogoJs1.jpg">
+            <div class="Box-Logo">
+                <img title="Logo - EstJs " src="../Styles/Imagens/Logo3-Imc.png">
             </div>
             <div class="Lista-Links">
                 <ul class="LL-Lista">
@@ -26,61 +26,67 @@
             </div>
         </div>
 
-        <div class="Form-User">
+        <form  class="Form-User" id="Form-User">
             <div class="Form-User-Titulo">
-                <h2>Assine a nossa News Letter.</h2>
-                <p>Oferemos aos nossos usários, artigos, matérias e materias relevantes em relatoórios informativos
+                <h2 class="Titulo2">Assine a nossa News Letter.</h2>
+                <h2 class="Subtitulo">Aposto que você já se inscreveu em uma dessas 😂.</h2>
+                <p>Oferecemos aos nossos usários, artigos, matérias e demais conteúdos relevantes em relatoórios
+                    informativos
                     semanais, confira !</p>
             </div>
 
             <div class="Form-Campos">
-                <label for="name"> Nome <i class="fa-solid fa-user"></i> :
-                    <input placeholder="Digite o seu nome " title="Campo - Name" type="text" id="name"
-                        class="form-item1">
+                <h2 class="Titulo2">Seja um usuário !</h2>
+                <h2 class="Subtitulo">Podemos começar com esses dados..</h2>
+                <label for="user-name"> Nome <i class="fa-solid fa-user"></i> :
+                    <input placeholder="Digite o seu nome " title="Campo - Name" type="text" id="user-name"
+                        required maxlength="50" class="form-item1">
                 </label>
-                <label for="email"> Email <i class="fa-solid fa-envelope"></i> :
-                    <input placeholder="Informe o seu email" title="Campo - Email" type="text" id="email"
-                        class="form-item1">
+                <label for="user-email"> Email <i class="fa-solid fa-envelope"></i> :
+                    <input placeholder="Informe o seu email" title="Campo - Email" type="text" id="user-email"
+                        required maxlength="45" class="form-item2">
                 </label>
+                <label for="user-message">Mensagem: </label>
+                    <textarea id="user-message"></textarea>
 
-                <button id="Btt-Form-User" class="Btt-Form-User" title="Botão de Envio - User Info">Prosseguir <i
+                
+
+                <input type="reset" onclick="reset()" class="Btt-Form-User" value="Limpar dados">
+
+                <button  type="button" id="Btt-Form-User" class="Btt-Form-User" title="Botão de Envio - User Info">Enviar Mensagem <i
                         class="fa-solid fa-user-check"></i> </button>
             </div>
 
 
-        </div>
+        </form>
 
         <section class="Imc-Principal">
-            <div class="Banner-Imc">
-                <img src="../Styles/Imagens/ImcBanner1-Mk.png">
-            </div>
-            <div class="Imc-Titulo">
+           
+            <div class="Titulo">
                 <h3>Avalie a sua condição física em passos simples ! </h3>
             </div>
             <div id="Form-Imc" class="Imc-Form-Campos">
-                <h2 class="Titulo-Form2">Cadastre-se ;)</h2>
+                <h2 class="Subtitulo">Cadastre-se ;)</h2>
                 <div class="Imc-Campos">
                     <label for="name"> Nome<i class="fa-solid fa-note-sticky"></i> :
-                        <input name="Imput-Imc" placeholder="Digite o seu Nome completo " required maxlenght="75" title="Campo - Name"
-                            type="text" id="name-Imc" class="Imc-item">
+                        <input name="Imput-Imc" placeholder="Digite o seu Nome completo " required maxlenght="75"
+                            title="Campo - Name" type="text" id="name-Imc" class="Imc-item">
                     </label>
                 </div>
                 <div class="Imc-Campos">
                     <label for="Peso"> Peso<i class="fa-solid fa-scale-balanced"></i> :
-                        <input name="Imput-Imc" placeholder="Digite o seu peso em Kg" required maxlenght="2" title="Campo - Peso"
-                            type="number" id="peso-Imc" class="Imc-Item">
+                        <input name="Imput-Imc" placeholder="Digite o seu peso em Kg" required maxlenght="2"
+                            title="Campo - Peso" type="number" id="peso-Imc" class="Imc-Item">
                     </label>
                 </div>
                 <div class="Imc-Campos">
                     <label for="Alt"> Altura<i class="fa-solid fa-arrow-up-9-1"></i> :
-                        <input name="Imput-Imc" placeholder="Digite a sua altura, Ex: 1.75" required maxlenght="4" title="Campo - Altura"
-                            type="number" id="alt-Imc" class="Imc-Item">
+                        <input name="Imput-Imc" placeholder="Digite a sua altura, Ex: 1.75" required maxlenght="4"
+                            title="Campo - Altura" type="number" id="alt-Imc" class="Imc-Item">
                     </label>
                 </div>
-                <button id="Btt-Form-Imc" class="Btt-Form-Imc" title="Botão, para verificacção de IMC">Prosseguir <i
+                <button id="Btt-Form-Imc" class="Btt-Form-Imc" title="Botão, para verificacção de IMC">Enviar Dados <i
                         class="fa-solid fa-clipboard-check"></i> </button>
-                <button id="Resetar" class="Btt-Form-Imc" title="Resetar os dados">Resetar
-                    Formulário <i class="fa-solid fa-backward"></i> </button>
 
                 <div id="Resp-Imc" class="Resp-Imc">
 
@@ -89,8 +95,8 @@
 
             <article id="Artigo-Texto1" class="Artigo-Texto1">
 
-                <h2 class="Artigo-Texto1-Titulo"><strong>Veja :</strong></h2>
-                <h2 class="Artigo-Texto1-Subtitulo"> Motivos que vão te convencer a querer aproveitar todos os insigths
+                <h2 class="Titulo"><strong>Veja :</strong></h2>
+                <h2 class="Subtitulo"> Motivos que vão te convencer a querer aproveitar todos os insigths
                     do IMC 7000.</h2>
                 <ul class="Arttxt-Lista">
                     <li class="Arttxt-item-lista">
